@@ -1,0 +1,14 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size:base($baseSize, 1) ;
+  font-family: 'Mukta', sans-serif;
+}
+body {
+  background-color: #fff9fa;
+  font-size: base($baseSize, .72);
+  font-family: inherit;
+}

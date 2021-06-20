@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{ content_for_header }}
+    {{- 'bootstrap.min.css' | asset_url | stylesheet_tag -}}
+    {{- 'bootstrap-select.min.css' | asset_url | stylesheet_tag -}}
+    {{- 'custom-fonticons.css' | asset_url | stylesheet_tag -}}
+    {{- 'owl-carousel.css' | asset_url | stylesheet_tag -}}
+    {{- 'owl.theme.default.css' | asset_url | stylesheet_tag -}}
+    {{- 'style.default.css' | asset_url | stylesheet_tag -}}
+    {{- 'theme.css' | asset_url | stylesheet_tag -}}
+  </head>
+
+  <body>
+    <main>
+      {% section 'header' %}
+      {{ content_for_layout }}
+      {% section 'footer' %}
+    </main>
+    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+    <script src="{{ 'bootstrap.bundle.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.cookie.js' | asset_url }}"></script>
+    <script src="{{ 'owl-carousel.min.js' | asset_url }}"></script>
+    <script src="{{ 'owl-carousel2-thumbs.min.js' | asset_url }}"></script>
+    <script src="{{ 'bootstrap-select.min.js' | asset_url }}"></script>
+    <script src="{{ 'front.js' | asset_url }}"></script>
+    <script src="{{ 'theme.js' | asset_url }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  </body>
+</html>

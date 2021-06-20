@@ -1,0 +1,32 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Advanced Gulp Theme",
+    "theme_author": "Sam Webb",
+    "theme_version": "1.0.0",
+    "theme_support_email": "sam@samthewebb.com",
+    "theme_documentation_url": "https://samthewebb.com"
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "id": "phone",
+        "type": "text",
+        "label": "Topbar phone number",
+        "default": "0045 6966 66 66 66"
+      },
+      {
+        "type": "text",
+        "id": "topbar_text",
+        "label": "topbar text",
+        "default": "Free shipping on order over 299$"
+      },
+      {
+        "type": "image_picker",
+        "id": "header_logo",
+        "label": "Header Logo"
+      }
+    ]
+  }
+]
