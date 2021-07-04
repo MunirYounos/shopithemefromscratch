@@ -1,40 +1,67 @@
 <section class="hero hero-home no-padding">
 	<!-- Hero Slider-->
 	<div class="owl-carousel owl-theme hero-slider">
-		<div style="background: url(img/hero-bg.jpg);" class="item d-flex align-items-center has-pattern">
+
+		{% for block in section.blocks %}
+		<div style="background: url({{block.settings.hero_image | img_url: '2048x'}})" class="item d-flex align-items-center has-pattern">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
-						<h1>Hub</h1>
-						<ul class="lead"> 
-							<li><strong>Bootstrap 4 E-commerce</strong> template</li>
-							<li><strong>24</strong> pages, <strong>6</strong> colour variants</li>
-							<li><strong>SCSS</strong> sources </li>
-							<li>frequent & <strong>free updates</strong></li>
-						</ul><a href="#" class="btn btn-template wide shop-now">Shop Now<i class="icon-bag"> </i></a>
+					<div class="col-lg-6 {%if block.settings.hero_white_color == true %} text-white {% endif %}">
+						<h2>{{block.settings.hero_heading}}</h2>
+						<p class="lead">{{block.settings.hero_rt}}</p>
+						<a href="{{block.settings.hero_link}}" class="btn btn-template wide shop-now">{{block.settings.hero_linktext}}<i class="icon-bag"> </i></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div style="background: url(img/hero-bg-2.jpg);" class="item d-flex align-items-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 text-white">
-						<h1>Labore et dolore magna aliqua</h1>
-						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-template wide shop-now">Shop Now<i class="icon-bag">  </i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div style="background: url(img/hero-bg-3.jpg);" class="item d-flex align-items-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 text-white">
-						<h1>Sed do eiusmod tempor</h1>
-						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-template wide shop-now">Shop Now<i class="icon-bag">           </i></a>
-					</div>
-				</div>
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 </section>
+
+
+{% schema %}
+{
+	"blocks": [
+		{
+			"type": "text",
+			"name": "Slider",
+			"settings": [
+				{
+					"id": "hero_image",
+					"type": "image_picker",
+					"label": "Slide Image"
+				},
+				{
+					"type": "text",
+					"id": "hero_heading",
+					"label": "Add hero Title"
+				},
+				{
+					"id": "hero_rt",
+					"type": "richtext",
+					"label": "Add custom text below",
+					"default": "<p>Add your text here</p>"
+				},
+
+				{
+          "id": "hero_link",
+          "type": "url",
+       		"label": "Button link"
+        },
+        {
+          "id": "hero_linktext",
+          "type": "text",
+          "label": "Button text",
+          "default": "Click here"
+        },
+				{
+					"type": "checkbox",
+					"id": "hero_white_color",
+					"label": "Show white hero text color",
+					"default": false
+				}
+			]
+		}
+	]
+}
+{% endschema %}

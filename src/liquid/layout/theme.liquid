@@ -13,9 +13,10 @@
     {{- 'bootstrap.min.css' | asset_url | stylesheet_tag -}}
     {{- 'bootstrap-select.min.css' | asset_url | stylesheet_tag -}}
     {{- 'custom-fonticons.css' | asset_url | stylesheet_tag -}}
-    {{- 'owl-carousel.css' | asset_url | stylesheet_tag -}}
+    {{- 'owl.carousel.css' | asset_url | stylesheet_tag -}}
     {{- 'owl.theme.default.css' | asset_url | stylesheet_tag -}}
     {{- 'style.default.css' | asset_url | stylesheet_tag -}}
+    {{- 'custom-functions.css' | asset_url | stylesheet_tag -}}
     {{- 'theme.css' | asset_url | stylesheet_tag -}}
   </head>
 
@@ -28,11 +29,18 @@
     <script src="{{ 'jquery.min.js' | asset_url }}"></script>
     <script src="{{ 'bootstrap.bundle.min.js' | asset_url }}"></script>
     <script src="{{ 'jquery.cookie.js' | asset_url }}"></script>
-    <script src="{{ 'owl-carousel.min.js' | asset_url }}"></script>
-    <script src="{{ 'owl-carousel2-thumbs.min.js' | asset_url }}"></script>
+    <script src="{{ 'owl.carousel.min.js' | asset_url }}"></script>
+    <script src="{{ 'owl.carousel2-thumbs.min.js' | asset_url }}"></script>
     <script src="{{ 'bootstrap-select.min.js' | asset_url }}"></script>
     <script src="{{ 'front.js' | asset_url }}"></script>
     <script src="{{ 'theme.js' | asset_url }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   </body>
 </html>
+
+<!-- 
+development:
+  password: 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
+  theme_id: "124261171374"
+  store: addnewtheme.myshopify.com
+  directory: "dist" -->
