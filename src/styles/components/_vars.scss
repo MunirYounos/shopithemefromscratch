@@ -1,1 +1,24 @@
-$baseSize: 20;
+$baseSize: calc(var(--fontbase) * 0.08rem);
+$sizeh1: calc(var(--fontbase) * 0.16rem);
+$sizeh2: calc(var(--fontbase) * 0.14rem);
+$sizeh3: calc(var(--fontbase) * 0.12rem);
+$sizeh4: calc(var(--fontbase) * 0.10rem);
+$sizeh5: calc(var(--fontbase) * 0.09rem);
+$exs:calc(var(--fontbase) * 0.05rem);
+$xs:calc(var(--fontbase) * 0.06rem);
+$sm: calc(var(--fontbase) * 0.07rem);
+$md: calc(var(--fontbase) * 0.08rem);
+$lg:calc(var(--fontbase) * 0.10rem);
+
+//colors
+$body: var(--body);
+$bodyText: var(--body-text);
+$topbarBg: var(--topbar-bg);
+$topbarText: var(--topbar-txt);
+$accent: var(--accent);
+$accentBase: var(--accentbase);
+
+$white: white;
+$black: black;
+
+

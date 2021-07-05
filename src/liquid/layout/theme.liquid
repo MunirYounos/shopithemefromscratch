@@ -17,6 +17,7 @@
     {{- 'owl.theme.default.css' | asset_url | stylesheet_tag -}}
     {{- 'style.default.css' | asset_url | stylesheet_tag -}}
     {{- 'custom-functions.css' | asset_url | stylesheet_tag -}}
+    {% render 'css-variables' %}
     {{- 'theme.css' | asset_url | stylesheet_tag -}}
   </head>
 
@@ -37,10 +38,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   </body>
 </html>
-
-<!-- 
-development:
-  password: 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
-  theme_id: "124261171374"
-  store: addnewtheme.myshopify.com
-  directory: "dist" -->

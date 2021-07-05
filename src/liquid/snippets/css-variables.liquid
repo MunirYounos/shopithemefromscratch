@@ -1,0 +1,17 @@
+{% comment %}
+  This is used to create CSS custom variables with Liquid references
+  The file variables.scss is referring these CSS custom variables as Sass variables
+  to use throughout the stylesheet
+{% endcomment %}
+
+{% style %}
+	:root {
+		--topbar-bg: {{settings.topbar_bg_color}};
+		--topbar-txt: {{settings.topbar_text_color }};
+		--accent: {{settings.main_accent_color}};
+		--accentbase: {{settings.main_accent_base}};
+		--fontbase: {{settings.font_base_size}};
+		--body: {{settings.body_bg}};
+		--body-text: {{settings.body_text}};
+	}
+{% endstyle %}

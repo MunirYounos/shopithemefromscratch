@@ -1,1 +1,28 @@
-{% render 'header' %}
+   
+	 
+{%- assign dkflag = section.settings.topbar_dk -%}
+{%- assign deflag = section.settings.topbar_de -%}
+	 <!-- navbar-->
+<header class="header">
+	{% include 'topbar' , dk: dkflag, de: deflag %}
+	{% render 'navbar' %}
+</header>
+
+{% schema %}
+{
+	"name": "Header styles",
+		"settings": [
+				{
+					"type": "image_picker",
+					"id": "topbar_dk",
+					"label": "DK"
+				},
+				{
+					"type": "image_picker",
+					"id": "topbar_de",
+					"label": "DE"
+				}
+		]
+
+}
+{% endschema %}

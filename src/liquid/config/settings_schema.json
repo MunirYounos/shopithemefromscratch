@@ -8,7 +8,7 @@
     "theme_documentation_url": "https://samthewebb.com"
   },
   {
-    "name": "Header",
+    "name": "Theme Custom Styles",
     "settings": [
       {
         "id": "phone",
@@ -21,6 +21,49 @@
         "id": "topbar_text",
         "label": "topbar text",
         "default": "Free shipping on order over 299$"
+      },
+      {
+        "type": "color",
+        "id": "topbar_bg_color",
+        "label": "Top bar background color"
+      },
+      {
+        "type": "color",
+        "id": "topbar_text_color",
+        "label": "Top bar text color"
+      },
+      {
+        "type": "color",
+        "id": "main_accent_color",
+        "label": "Main Accent color",
+        "default": "#f48400"
+      },
+      {
+        "type": "color",
+        "id": "main_accent_base",
+        "label": "Main Accent base color",
+        "default": "#83d0bd"
+      },
+      {
+        "type": "color",
+        "id": "body_bg",
+        "label": "Main body background color",
+        "default": "#fff9fa"
+      },
+      {
+        "type": "color",
+        "id": "body_text",
+        "label": "Body main text color"
+      },
+      {
+        "type": "range",
+        "id": "font_base_size",
+        "label": "Font base size from 10 to 22px",
+        "default": 16,
+        "min": 10,
+        "max": 22,
+        "step": 1,
+        "unit": "px"
       },
       {
         "type": "image_picker",
